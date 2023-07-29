@@ -2,7 +2,7 @@ Pseudo Code
 Assignment1: Part2
 
 PROBLEM OVERVIEW:
-This script will need to move through 4 files in parralell, two with biological sequence data in both a R1 and R2 direction, and two with indices reverse complimented of eachother. The program will need to determine if the indices are a perfect match, and too low quality (contain N's), or are "hopped" indices and do not match.
+This script will need to move through 4 files in parallel, two with biological sequence data in both a R1 and R2 direction, two with indices as reverse compliments of eachother. The program will need to determine if the indices are a perfect match, too low quality (contain N's), or are "hopped" indices and do not match.
 Based on this, it will parse the read 1 data and read 4 data into different files (see bellow) after appending the index to the eand of each reads header in the following format @HEADER INDEX1-(REVCOMP(INDEX2))
 
 Open and create apropriate files
@@ -57,11 +57,6 @@ Values = [header, seq, qscore]
 
 R1hopped_dict = {}
 R4hopped_dict = {}
-Keys = indices
-Values = [header, seq, qscore]
-
-R1matched_dict = {}
-R4matched_dict = {}
 Keys = indices
 Values = [header, seq, qscore]
 
