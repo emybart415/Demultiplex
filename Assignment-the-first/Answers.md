@@ -16,18 +16,20 @@ https://github.com/emybart415/Demultiplex/blob/master/Assignment-the-first/demul
 
 2. Per-base NT distribution
     1. Use markdown to insert your 4 histograms here.
-    2. [R1 Qscore Distribution](https://github.com/emybart415/Demultiplex/blob/master/Assignment-the-first/R1_results.png)
-    3. [R2 Index Qscore Distribution](https://github.com/emybart415/Demultiplex/blob/master/Assignment-the-first/R2_results.png)
-    4. [R3 Index Qscore Distribution](https://github.com/emybart415/Demultiplex/blob/master/Assignment-the-first/R3_results.png)
-    5. [R4 Qscore Distribution](https://github.com/emybart415/Demultiplex/blob/master/Assignment-the-first/R4_results.png)
+    2. [R1 Qscore Distribution](https://github.com/emybart415/Demultiplex/blob/master/Assignment-the-first/R1_V2_results.png)
+    3. [R2 Index Qscore Distribution](https://github.com/emybart415/Demultiplex/blob/master/Assignment-the-first/R2_V2_results.png)
+    4. [R3 Index Qscore Distribution](https://github.com/emybart415/Demultiplex/blob/master/Assignment-the-first/R3_V2_results.png)
+    5. [R4 Qscore Distribution](https://github.com/emybart415/Demultiplex/blob/master/Assignment-the-first/R4_V2_results.png)
 
 UPDATE: as of 20230801 scripts are re-running:
 Histograms will be at:
 /projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first as R1_V2_results.png, R2_V2_results.png, R3_V2_results.png, R4_V2_results.png
 
+UPDATE 20230801 14:56 - everything is up to date, linked files are the correct V2 and up on github
+
 - What is a good quality score cutoff for index reads and biological read pairs to utilize for sample identification and downstream analysis, respectively? Justify your answer.
 ```
-A good quality score cutoff would be higher for the indices than it would for the sequence. I think 30 would be good for indices because it makes sure that the correct samples are being assigned to the sequence. Since illumin claims Q30 is benchmark, I would like to say a cutoff for biological sequencing data is 30, but I am pretty sure you can get away with a qscore of 25, especially if you have good coverage.
+A good quality score cutoff would be higher for the indices than it would for the sequence. I think 30 would be good for indices because it makes sure that the correct samples are being assigned to the sequence. Since illumin claims Q30 is benchmark, I would like to say a cutoff for biological sequencing data is 30, but I am pretty sure you can get away with a qscore of 25, especially if you have good coverage considering you are pulling an average. I think it would also depend what your goals are for downstream analysis of the sequences. 
 ```
 - How many indexes have undetermined (N) base calls? (Utilize your command line tool knowledge. Submit the command(s) you used. CHALLENGE: use a one-line command)
 ```

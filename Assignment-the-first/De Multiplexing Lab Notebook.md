@@ -85,44 +85,12 @@ August 1st, 2023
 -> Submitted batch job 23958 for R3
 -> Submitted batch job 23959 for R4
 
-	Command being timed: "/projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/demultiplex_A1P1.py -f /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R1_001.fastq.gz -l 101 -o /projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/R1_results"
-	User time (seconds): 5358.84
-	System time (seconds): 8.49
-	Percent of CPU this job got: 99%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:29:39
-	Maximum resident set size (kbytes): 68376
-	Page size (bytes): 4096
-	Exit status: 0
     -> Reulted in /projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/R1_results.png
 
-	Command being timed: "/projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/demultiplex_A1P1.py -f /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R2_001.fastq.gz -l 8 -o /projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/R2_results"
-	User time (seconds): 742.44
-	System time (seconds): 2.20
-	Percent of CPU this job got: 99%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 12:28.60
-	Maximum resident set size (kbytes): 77432
-	Page size (bytes): 4096
-	Exit status: 0
     -> Reulted in /projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/R2_results.png
 
-	Command being timed: "/projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/demultiplex_A1P1.py -f /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R3_001.fastq.gz -l 8 -o /projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/R3_results"
-	User time (seconds): 857.29
-	System time (seconds): 2.13
-	Percent of CPU this job got: 99%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 14:20.68
-	Maximum resident set size (kbytes): 64280
-	Page size (bytes): 4096
-	Exit status: 0
     -> Reulted in /projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/R3_results.png
 
-	Command being timed: "/projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/demultiplex_A1P1.py -f /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R4_001.fastq.gz -l 101 -o /projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/R4_results"
-	User time (seconds): 5355.23
-	System time (seconds): 10.12
-	Percent of CPU this job got: 99%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:29:37
-	Maximum resident set size (kbytes): 71680
-	Page size (bytes): 4096
-	Exit status: 0
     -> Reulted in /projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/R4_results.png
 
 Everything worked but histograms look incorrect! 1.4e10 max qscore mean on y axis
@@ -137,3 +105,40 @@ sbatch A1P1.sh
 Submitted batch job 23992 - R2
 sbatch A1P1.sh
 Submitted batch job 23993 - R3
+
+	Command being timed: "/projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/demultiplex_A1P1.py -f /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R1_001.fastq.gz -l 101 -o /projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/R1_V2_results"
+	User time (seconds): 5091.57
+	System time (seconds): 8.25
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:25:17
+	Maximum resident set size (kbytes): 67444
+	Page size (bytes): 4096
+	Exit status: 0
+
+	Command being timed: "/projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/demultiplex_A1P1.py -f /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R2_001.fastq.gz -l 8 -o /projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/R2_V2_results"
+	User time (seconds): 729.37
+	System time (seconds): 2.00
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 12:13.73
+	Maximum resident set size (kbytes): 73824
+	Page size (bytes): 4096
+	Exit status: 0
+
+	Command being timed: "/projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/demultiplex_A1P1.py -f /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R3_001.fastq.gz -l 8 -o /projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/R3_V2_results"
+	User time (seconds): 725.62
+	System time (seconds): 2.10
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 12:08.46
+	Maximum resident set size (kbytes): 74700
+	Page size (bytes): 4096
+	Exit status: 0
+
+	Command being timed: "/projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/demultiplex_A1P1.py -f /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R4_001.fastq.gz -l 101 -o /projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/R4_V2_results"
+	User time (seconds): 5076.57
+	System time (seconds): 10.05
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:24:59
+	Maximum resident set size (kbytes): 71040
+	Page size (bytes): 4096
+	Exit status: 0
+
