@@ -52,7 +52,6 @@ def populate_list(file: str) -> 'tuple[list, int]':
             for line in fh: 
                 num_lines += 1 #counts number of lines
             
-            
                 if num_lines%4==0: #use only the 4th line of the record that contains quality scores
                     phred_scores = line.strip() #strip newline characters
                     for i, character in enumerate(phred_scores): #iterate over each quality score character
@@ -61,16 +60,14 @@ def populate_list(file: str) -> 'tuple[list, int]':
 
 my_list, num_lines = populate_list(filename)
 
-def calc_mean_phreds(my_list, num_lines):
-    for i, value in enumerate(my_list):
-        my_list[i]= value/(num_lines)
-    return my_list
-
-
+for i, value in enumerate(my_list):
+    mean_list= value/(num_lines/4)
+    my_list[i]=mean_list 
 
 
 plt.bar(range(len(my_list)), my_list)
 plt.title('Mean PHRED Score for Each Nucleotide Location')
 plt.xlabel('Nucleotide Location')
 plt.ylabel('Mean Quality Score')
+plt.ylim(0,45)
 plt.savefig(f'{args.output_file}.png')

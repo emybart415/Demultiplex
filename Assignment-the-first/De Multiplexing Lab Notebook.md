@@ -2,21 +2,21 @@ De Multiplexing Lab Notebook
 
 #Known Index 
 #File location: /projects/bgmp/shared/2017_sequencing
-# B1	GTAGCGTA    A5	CGATCGAT    C1	GATCAAGG
-# B9	AACAGCGA    C9	TAGCCATG    C3	CGGTAATC
-# B3	CTCTGGAT    C4	TACCGGAT    A11	CTAGCTCA
-# C7	CACTTCAC    B2	GCTACTCT    A1	ACGATCAG
-# B7	TATGGCAC    A3	TGTTCCGT    B4	GTCCTAAG
-# A12	TCGACAAG    C10	TCTTCGAC    A2	ATCATGCG
-# C2	ATCGTGGT    A10	TCGAGAGT    B8	TCGGATTC
-# A7	GATCTTGC    B10	AGAGTCCA    A8	AGGATAGC
+#B1	GTAGCGTA    A5	CGATCGAT    C1	GATCAAGG
+#B9	AACAGCGA    C9	TAGCCATG    C3	CGGTAATC
+#B3	CTCTGGAT    C4	TACCGGAT    A11	CTAGCTCA
+#C7	CACTTCAC    B2	GCTACTCT    A1	ACGATCAG
+#B7	TATGGCAC    A3	TGTTCCGT    B4	GTCCTAAG
+#A12	TCGACAAG    C10	TCTTCGAC    A2	ATCATGCG
+#C2	ATCGTGGT    A10	TCGAGAGT    B8	TCGGATTC
+#A7	GATCTTGC    B10	AGAGTCCA    A8	AGGATAGC
 
 #starting files
 #File Location: /projects/bgmp/shared/2017_sequencing
-# 1294_S1_L008_R1_001.fastq.gz -> R1 Biological sequence (101 bp)
-# 1294_S1_L008_R2_001.fastq.gz -> R2 Index (8 bp)
-# 1294_S1_L008_R3_001.fastq.gz -> R3 Index (8 bp)
-# 1294_S1_L008_R4_001.fastq.gz -> R4 Biological Sequence (101 bp)
+#1294_S1_L008_R1_001.fastq.gz -> R1 Biological sequence (101 bp)
+#1294_S1_L008_R2_001.fastq.gz -> R2 Index (8 bp)
+#1294_S1_L008_R3_001.fastq.gz -> R3 Index (8 bp)
+#1294_S1_L008_R4_001.fastq.gz -> R4 Biological Sequence (101 bp)
 
 
 Original data explorataion:
@@ -124,3 +124,16 @@ August 1st, 2023
 	Page size (bytes): 4096
 	Exit status: 0
     -> Reulted in /projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/R4_results.png
+
+Everything worked but histograms look incorrect! 1.4e10 max qscore mean on y axis
+- realized its because i failed to divide my num_lines by 4
+
+Resubmitted jobs:
+sbatch A1P1.sh
+Submitted batch job 23990 - R1
+sbatch A1P1.sh
+Submitted batch job 23991 - R4
+sbatch A1P1.sh
+Submitted batch job 23992 - R2
+sbatch A1P1.sh
+Submitted batch job 23993 - R3
