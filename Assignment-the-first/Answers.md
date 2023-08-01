@@ -34,9 +34,12 @@ zcat 1294_S1_L008_R3_001.fastq.gz | grep -A1 "^@" | grep -v "^@" | grep -v "^--$
 
 ## Part 2
 1. Define the problem
+
 This script will need to move through 4 files in parallel, two with biological sequence data in both a R1 and R2 direction, two with indices as reverse compliments of eachother. The program will need to determine if the indices are a perfect match, too low quality (contain N's), or are "hopped" indices and do not match.
 Based on this, it will parse the read 1 data and read 4 data into different files (see bellow) after appending the index to the eand of each reads header in the following format @HEADER INDEX1-(REVCOMP(INDEX2))
+
 2. Describe output
+```
 -> Need to create >= 6 files:
         - R1 $ R2 FASTQ files for matching/high quality indices (24 for each read)
                 -R1_Index 1-24.fq
@@ -47,6 +50,8 @@ Based on this, it will parse the read 1 data and read 4 data into different file
         - R1 $ R2 FASTQ files for hopped indices (2 total files)
             -R1_hopped.fq
             -R2_hopped.fq
+```
+
 3. Upload your [4 input FASTQ files](../TEST-input_FASTQ) and your [>=6 expected output FASTQ files](../TEST-output_FASTQ).
 4. Pseudocode
 5. High level functions. For each function, be sure to include: 
