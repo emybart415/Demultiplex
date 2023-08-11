@@ -1,0 +1,24 @@
+Summary:
+
+Total Number of Reads Parsed:
+363246735
+
+Total Number of Matched Reads:
+331755033
+
+Total Number of Reads Considered to Have Unknown or Low Quality Indices:
+30783962
+
+Percent of Total Reads with Indices Considered Low Quality:
+8.474669978795541%
+
+Total Number of Reads with Index Hopped Indices:
+707740
+
+Percent of Total Reads with Index Hopped Indices:
+0.19483726398807136%
+
+
+----------------------------------------------------------------------------------------------------------
+To see a comprehesive list of matched index pairs, see "Matched Reads.tsv"
+To see a comprehesive list of hopped index pairs, see "Hopped Reads.tsv"
