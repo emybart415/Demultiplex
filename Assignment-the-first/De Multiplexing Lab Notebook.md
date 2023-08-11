@@ -1,6 +1,7 @@
 De Multiplexing Lab Notebook
 
 #Known Index 
+```
 #File location: /projects/bgmp/shared/2017_sequencing
 #B1	GTAGCGTA    A5	CGATCGAT    C1	GATCAAGG
 #B9	AACAGCGA    C9	TAGCCATG    C3	CGGTAATC
@@ -10,14 +11,16 @@ De Multiplexing Lab Notebook
 #A12	TCGACAAG    C10	TCTTCGAC    A2	ATCATGCG
 #C2	ATCGTGGT    A10	TCGAGAGT    B8	TCGGATTC
 #A7	GATCTTGC    B10	AGAGTCCA    A8	AGGATAGC
+```
 
 #starting files
+```
 #File Location: /projects/bgmp/shared/2017_sequencing
 #1294_S1_L008_R1_001.fastq.gz -> R1 Biological sequence (101 bp)
 #1294_S1_L008_R2_001.fastq.gz -> R2 Index (8 bp)
 #1294_S1_L008_R3_001.fastq.gz -> R3 Index (8 bp)
 #1294_S1_L008_R4_001.fastq.gz -> R4 Biological Sequence (101 bp)
-
+```
 
 Original data explorataion:
 
@@ -96,6 +99,15 @@ August 1st, 2023
 Everything worked but histograms look incorrect! 1.4e10 max qscore mean on y axis
 - realized its because i failed to divide my num_lines by 4
 
+
+    -> Reulted in /projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/R1_V2_results.png
+
+    -> Reulted in /projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/R2_V2_results.png
+
+    -> Reulted in /projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/R3_V2_results.png
+
+    -> Reulted in /projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-first/R4_V2_results.png
+
 Resubmitted jobs:
 sbatch A1P1.sh
 Submitted batch job 23990 - R1
@@ -141,4 +153,67 @@ Submitted batch job 23993 - R3
 	Maximum resident set size (kbytes): 71040
 	Page size (bytes): 4096
 	Exit status: 0
+
+▼△▼△▼△▼△▼△▼△▼▼△▼△▼△▼△▼△▼△▼▼△▼△▼△▼△▼△▼△▼▼△▼△▼△▼△▼△▼△▼▼△▼△▼△▼△▼△▼△▼▼△▼△▼△▼△▼△▼△▼▼△▼△▼△▼△▼△▼△▼▼△▼△▼△▼△▼△▼△▼▼△▼△▼△▼△▼△▼△▼▼△▼△▼△▼△▼△▼
+August 10, 2023
+▼△▼△▼△▼△▼△▼△▼▼△▼△▼△▼△▼△▼△▼▼△▼△▼△▼△▼△▼△▼▼△▼△▼△▼△▼△▼△▼▼△▼△▼△▼△▼△▼△▼▼△▼△▼△▼△▼△▼△▼▼△▼△▼△▼△▼△▼△▼▼△▼△▼△▼△▼△▼△▼▼△▼△▼△▼△▼△▼△▼▼△▼△▼△▼△▼△▼
+
+Final script location: /projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-third/demultiplexing_A3.py
+Inputs:
+R1 Biological sequence
+R2 Index
+R3 Index
+R4 Biological Sequence
+Known index file (tab separated, with Indices in 5th column)
+
+Outputs:
+-o output file with a summary (.txt form)
+Hopped Reads.tsv
+Matched Reads.tsv
+
+SBATCH Script location: /projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-third/A3.sh
+sbatch ./A3.sh
+Submitted batch job 27595
+-> Worked successfully, BUT I had my header inside my loop writing to my TSV output files. So after every data line there was a whole header line. 
+->Fixed and re-ran
+
+sbatch ./A3.sh
+Submitted batch job 28489
+-> When I fixed the above problem, I forgot to add new line characters. Fixed and re-ran.
+
+sbatch ./A3.sh 
+Submitted batch job 28493
+	Command being timed: "/projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-third/demultiplexing_A3.py -a /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R1_001.fastq.gz -b /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R2_001.fastq.gz -c /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R3_001.fastq.gz -d /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R4_001.fastq.gz -o /projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-third/2017_summary_1 -k /projects/bgmp/shared/2017_sequencing/indexes.txt"
+	User time (seconds): 3000.81
+	System time (seconds): 68.68
+	Percent of CPU this job got: 62%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:21:22
+	Maximum resident set size (kbytes): 288124
+	Page size (bytes): 4096
+	Exit status: 0
+
+Created:
+3 output files: 
+Location -> /projects/bgmp/ebart/bioinfo/Bi622/Demultiplex/Demultiplex/Assignment-the-third
+Names:  2017_summary_1.txt , 'Hopped Reads.tsv', 'Matched Reads.tsv' 
+52 FATSTQ files
+
+Summary of results:
+Total Number of Reads Parsed:
+363246735
+Total Number of Matched Reads:
+331755033
+Total Number of Reads Considered to Have Unknown or Low Quality Indices:
+30783962
+Percent of Total Reads with Indices Considered Low Quality:
+8.474669978795541%
+Total Number of Reads with Index Hopped Indices:
+707740
+Percent of Total Reads with Index Hopped Indices:
+0.19483726398807136%
+Index Pair that hopped the most: ('TATGGCAC', 'TGTTCCGT')	88571	12.51462401446859%
+Most "matched" reads had the following index: TACCGGAT	76363857	23.018145741288574%
+
+---Overall this looks like a decent run. Would have liked my low quality and unknown indices to be lower than 8% of the total read number, but it isnt the worst. The hopping rate is low, which is good. Meaning if anything it could be the sequencer needs a PM, but overall labratory protocol and environment for wet lab work is sufficient. 
+---Choosing low quality cutoff: Others chose to do a low quality cutoff for the indices based on qscore or average qscore. I figured this was unnecessary because quality trimming of the individual sequences can be done later on. Also with illumina data, the final result is based off of the cumulation of reads. If a specific biological read had truly been low quality, downstream anaylysis could solve some of those problems. 
 
