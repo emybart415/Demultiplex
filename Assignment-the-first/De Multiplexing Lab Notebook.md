@@ -23,7 +23,7 @@ De Multiplexing Lab Notebook
 ```
 
 Original data explorataion:
-
+```
 ```zcat 1294_S1_L008_R1_001.fastq.gz | head```
 -> @K00337:83:HJKJNBBXX:8:1101:1265:1191 1:N:0:1
 ```zcat 1294_S1_L008_R2_001.fastq.gz | head```
@@ -32,11 +32,12 @@ Original data explorataion:
 -> @K00337:83:HJKJNBBXX:8:1101:1265:1191 3:N:0:1
 ```zcat 1294_S1_L008_R4_001.fastq.gz | head```
 -> @K00337:83:HJKJNBBXX:8:1101:1265:1191 4:N:0:1 --> The first read (first 4 lines of every file) are tied to the same cluster, they have the same header except for the 4* in 4:N:0:1
-
+```
+```
 Phred encoding:
 +33
 -> Quality score include >,J,F which correalte on the ascii table to +33 encoding
-
+```
 ```zcat 1294_S1_L008_R4_001.fastq.gz | wc -l```
 -> 1452986940
 ```zcat 1294_S1_L008_R1_001.fastq.gz | wc -l &```
@@ -47,7 +48,7 @@ Phred encoding:
 -> 1452986940
 ```zcat 1294_S1_L008_R3_001.fastq.gz | wc -l &```
 [3] 2648914
-
+```
 - How many indexes have undetermined (N) base calls? (Utilize your command line tool knowledge. Submit the command(s) you used. CHALLENGE: use a one-line command)
 ```
 zcat 1294_S1_L008_R2_001.fastq.gz | grep -A1 "^@" | grep -v "^@" | grep -v "^--$" | grep "N" | wc -l --> 3976613 indices
